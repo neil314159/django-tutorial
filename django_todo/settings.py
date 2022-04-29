@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-neil314159-djangotutori-1lqe70hsz60.ws-eu43.gitpod.io']
 
 # Application definition
 
