@@ -1,3 +1,4 @@
+import dj_database_url
 """
 Django settings for django_todo project.
 
@@ -75,11 +76,15 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse('postgres://tvuqwoytinohef:9914a4403d894e6d9f5725519a40624d40ea185b6a42cece32b08af658f7d36b@ec2-52-48-159-67.eu-west-1.compute.amazonaws.com:5432/d2qrgj3dgkijde')
 }
 
 
